@@ -1,0 +1,16 @@
+/* In this kata, you must create a digital root function.
+
+A digital root is the recursive sum of all the digits in a number. 
+Given n, take the sum of the digits of n. If that value has two digits, 
+continue reducing in this way until a single-digit number is produced. 
+This is only applicable to the natural numbers. */
+
+function digital_root(n) {
+if(n<10) return n;
+var sum = 0;
+var s = n.toString();
+for(i=0; i<s.length; i++){
+sum += Number(s[i]);
+}
+return digital_root(sum);
+}
