@@ -14,3 +14,9 @@ var moveZeros = function (arr) {
   arr.map((i)  => i === 0 ? zeros.push(i) : result.push(i));
   return [...result, ...zeros]
 }
+
+//or
+
+var moveZeros = function (arr) {
+  return arr.filter(x => x !== 0).concat(arr.filter(x => x === 0));
+}
